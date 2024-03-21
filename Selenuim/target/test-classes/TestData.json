@@ -1,0 +1,177 @@
+{
+  "testFrame1": {
+    "frameAmountInShekel": "5,000",
+    "percentageFrameFromDeal": "50",
+    "dealAmountBefore": "10,000",
+    "dealAmountAfter": "5,000"
+  },
+  "testFrame2": {
+    "dealStatus": "פונטנציאלית",
+    "creditType": "  ישיר",
+    "creditPurpose": "  רכישת שליטה",
+    "dealPosition": "  משקיע עוגן"
+  },
+  "testFrame3": {
+    "mainBorrower": "מיאמי בע\"מ",
+    "BorrowerID": "ח\"פ 12345679 - ישראל",
+    "BorrowerPhone": "ייי - 052336666 (סלולר)",
+    "BorrowerEmail": "miamigmail.com"
+  },
+  "testFrame4": {
+    "interestField": "5",
+    "variableInterest": "ליבור | 215",
+    "MHMField": "5",
+    "linkage": "נייר100 | 100",
+    "spaciousField": "5",
+    "TLVField": "5"
+  },
+  "testFrame5": {
+    "BICodeFromList": "  18 - הלוואה ממונפת ריקורס לא קונסורציום"
+  },
+  "testFrame6": {
+    "TatAfik": "אג\"ח להמרה לא סחיר | 2800",
+    "Afik": "אג\"ח להמרה לא סחיר",
+    "Manpik": "איסתא ליינס חברת נסיעות בישראל בע\"מ | 1036",
+    "Anaf": "Energy | 42",
+    "IssuingCountry": "ACADIAN",
+    "tradingCountry": "אפריקה ישראל",
+    "exposureState": "אירופה",
+    "GeographicArea": "  ישראל",
+    "Borsa": "בדיקה | 1",
+    "Konzrn": "בזק | 10",
+    "Property": "הלוואה לבדיקה אורי 1 | 113113",
+    "baseAssetMultiplier": "5",
+    "coinExposure": "\"עו\"\"ש מט\"\"ח בארץ - לדוח אוצר\" | 28600000",
+    "TypeForRiskManagement": "  אג\"ח להמרה",
+    "AttachmentType": "אג\"ח לא סחיר לא  להמרה-אחר | 28"
+  },
+  "testFrame7": {
+    "borrowerName": "מיאמי בע\"מ",
+    "serialNumber": "5",
+    "contact": "ראשי",
+    "borrowerPhone": "ייי - 052336666 (סלולר)",
+    "borrowerEmail": "miamigmail.com"
+  },
+  "testFrame8": {
+    "SafeDetail": "בדיקה",
+    "safeType": "  אנרגיה"
+  },
+  "testFrame9": {
+    "contactName": "ניקולה יוקיץ",
+    "serialNumber": "4",
+    "contactPhone": "fff - 05222222 (סלולר)",
+    "contactEmail": "fff@gmail.com",
+    "contactJob": "  מנהל כספים"
+  },
+  "testFrame10": {
+    "documentsTab": "מסמכים"
+  },
+  "testFrame11": {
+    "dealEventTab": "אירועים"
+  },
+  "testFrame12": {
+    "offerDataTab": "נתוני הצעה"
+  },
+  "testFrame13": {
+    "frameTitle": "מסגרת"
+  },
+  "testDeal1": {
+    "MainBorrowerField": "מיאמי בע\"מ"
+  },
+  "testDeal2": {
+    "offerDataPageTitle": "נתוני הצעה"
+  },
+  "testDeal3": {
+    "afik": "אג\"ח להמרה לא סחיר"
+  },
+  "testDeal4": {
+    "AdditionalConditionsTab": "תנאים נוספים"
+  },
+  "testDeal5": {
+    "CollateralAndGuarantorsTab": "בטחונות וערבים"
+  },
+  "testDeal6": {
+    "contactTab": "אנשי קשר"
+  },
+  "testDeal7": {
+    "documentsTab": "מסמכים"
+  },
+  "testDeal8": {
+    "dealEventTab": "אירועים"
+  },
+  "testDeal9": {
+    "dealTitle": "עסקה"
+  },
+  "testLoan1": {
+    "coinField": "ILS",
+    "calculatedFieldsLoanTab": "5,000"
+  },
+  "testLoan2": {
+    "TitleLoan": "הלוואה",
+    "LoanCoin": "ILS",
+    "LoanPercentageFromFrame": "40",
+    "RemainingFrameBefore": "5,000",
+    "RemainingFrameAfter": "3,000",
+    "DealStatus": "פונטנציאלית",
+    "CreditType": "  ישיר",
+    "CreditPurpose": "  רכישת שליטה",
+    "DealPosition": "  משקיע עוגן",
+    "MainBorrower": "מיאמי בע\"מ",
+    "BorrowerID": "ח\"פ 12345679 - ישראל",
+    "BorrowerPhone": "ייי - 052336666 (סלולר)",
+    "BorrowerEmail": "miamigmail.com",
+    "InterestField": "5",
+    "VariableInterest": "ליבור | 215",
+    "MHMField": "5",
+    "Linkage": "נייר100 | 100",
+    "SpaciousField": "5",
+    "TLVField": "5"
+  },
+  "testLoan3": {
+    "TatAfik": "אג\"ח להמרה לא סחיר | 2800",
+    "Afik": "אג\"ח להמרה לא סחיר",
+    "Manpik": "איסתא ליינס חברת נסיעות בישראל בע\"מ | 1036",
+    "Anaf": "Energy | 42",
+    "IssuingCountry": "ACADIAN",
+    "TradingCountry": "אפריקה ישראל",
+    "ExposureState": "אירופה",
+    "GeographicArea": "  ישראל",
+    "Borsa": "בדיקה | 1",
+    "Konzrn": "בזק | 10",
+    "Property": "הלוואה לבדיקה אורי 1 | 113113",
+    "BaseAssetMultiplier": "5",
+    "CoinExposure": "\"עו\"\"ש מט\"\"ח בארץ - לדוח אוצר\" | 28600000",
+    "TypeForRiskManagement": "  אג\"ח להמרה",
+    "AttachmentType": "אג\"ח לא סחיר לא  להמרה-אחר | 28"
+  },
+  "LoanTest4": {
+    "BorrowerName": "מיאמי בע\"מ",
+    "SerialNumber": "5",
+    "Contact": "ראשי",
+    "BorrowerPhone": "ייי - 052336666 (סלולר)",
+    "BorrowerEmail": "miamigmail.com"
+  },
+  "LoanTest5": {
+    "SafeDetail": "בדיקה",
+    "SafeType": "אנרגיה"
+  },
+  "LoanTest6": {
+    "ContactName": "ניקולה יוקיץ",
+    "SerialNumber": "4",
+    "ContactPhone": "fff - 05222222 (סלולר)",
+    "ContactEmail": "fff@gmail.com",
+    "ContactJob": "  מנהל כספים"
+  },
+  "LoanTest7": {
+    "documentsTab": "מסמכים"
+  },
+  "LoanTest8": {
+    "dealEventTab": "אירועים"
+  },
+  "LoanTest9": {
+    "offerDataTab": "נתוני הצעה"
+  },
+  "BPPrivateDetails": {
+    "PrivateBPTitle": "שותף עסקי - פרטי"
+  }
+}
