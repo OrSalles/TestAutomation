@@ -4,16 +4,21 @@ import HalvotPages.BasePage;
 import com.opencsv.CSVReader;
 import com.opencsv.CSVWriter;
 import com.opencsv.exceptions.CsvException;
+import org.json.JSONObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.testng.asserts.SoftAssert;
 
 import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.lang.reflect.Field;
+import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 
 
 public class FrameExtraDetailsPage extends BasePage {
@@ -220,8 +225,37 @@ public class FrameExtraDetailsPage extends BasePage {
     public String getAttachmentType(){
         return AttachmentType.getAttribute("value");
     }
-    }
 
+    public void assertFrameExtraDetails(JSONObject jsonObject) throws IllegalAccessException {
+        Map<String, Object> map = jsonObject.toMap();
+        List<Field> fields = Arrays.asList(this.getClass().getDeclaredFields());
+
+        // Create a SoftAssert instance
+        SoftAssert softAssert = new SoftAssert();
+
+        for (Field field : fields) {
+            String name = field.getName();
+            if (!map.containsKey(name)) {
+                continue;
+            }
+            WebElement element = (WebElement) field.get(this);
+            String expectedValue = map.get(name).toString();
+
+            // Perform soft assertions
+            if(element.getTagName().equals("option") || element.getTagName().equals("span")){
+
+                softAssert.assertEquals(element.getText(), expectedValue, "Value not inserted correctly for element: " + name);
+            }
+
+            else{
+                softAssert.assertEquals(element.getAttribute("value"), expectedValue, "Value not inserted correctly for element: " + name);
+            }
+        }
+
+        // Assert all soft assertions
+        softAssert.assertAll();
+    }
+    }
 
 
 

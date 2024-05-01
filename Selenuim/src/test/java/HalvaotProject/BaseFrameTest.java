@@ -3,18 +3,22 @@ package HalvaotProject;
 import Utils.JsonUtils;
 import com.google.common.util.concurrent.Uninterruptibles;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.json.simple.JSONObject;
+import org.json.JSONObject;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import HalvotPages.PageLoader;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
+import Utils.ReportUtils;
 
 
 public class BaseFrameTest {
@@ -28,7 +32,7 @@ public class BaseFrameTest {
     String APIUrl = "";
 
     @BeforeClass
-    public void startSession() throws InterruptedException, AWTException {
+    public void startSession() throws InterruptedException, AWTException, IOException {
         JSONObject urlHalvaot = JsonUtils.returnJsonObject(urlData, "urlHalvaot");
         websiteUrl = (String) urlHalvaot.get("website");
         WebDriverManager.chromedriver().setup();
@@ -45,7 +49,7 @@ public class BaseFrameTest {
     }
 
 
-    private void changeAPI() throws AWTException, InterruptedException {
+    private void changeAPI() throws AWTException, InterruptedException, IOException {
         JSONObject urlAPI = JsonUtils.returnJsonObject(urlData, "urlAPI");
         APIUrl = (String) urlAPI.get("API");
         Robot robot = new Robot();
@@ -62,6 +66,12 @@ public class BaseFrameTest {
         alert.sendKeys(APIUrl);
         driver.switchTo().alert().accept();
     }
+    @AfterMethod
+    public void saveScreenShot(){
+        ReportUtils.saveScreenShot(driver);
+    }
+
+
 
     @AfterClass
     public void closeSession() {

@@ -1,18 +1,21 @@
 package HalvaotProject;
 
 import Utils.JsonUtils;
+import Utils.ReportUtils;
 import com.google.common.util.concurrent.Uninterruptibles;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.json.simple.JSONObject;
+import org.json.JSONObject;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import HalvotPages.PageLoader;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 public class BaseLoanTest {
@@ -25,7 +28,7 @@ public class BaseLoanTest {
     String APIUrl = "";
 
     @BeforeClass
-    public void startSession() throws InterruptedException, AWTException {
+    public void startSession() throws InterruptedException, AWTException, IOException {
         JSONObject urlHalvaot = JsonUtils.returnJsonObject(urlData, "urlHalvaot");
         websiteUrl = (String) urlHalvaot.get("website");
         WebDriverManager.chromedriver().setup();
@@ -43,9 +46,13 @@ public class BaseLoanTest {
         pageLoader.loanTab.loanTab.click();
         pageLoader.loanTab.clickOnThePlusButton();
     }
+    @AfterMethod
+    public void saveScreenShot(){
+        ReportUtils.saveScreenShot(driver);
+    }
 
 
-    private void changeAPI() throws AWTException, InterruptedException {
+    private void changeAPI() throws AWTException, InterruptedException, IOException {
         JSONObject urlAPI = JsonUtils.returnJsonObject(urlData, "urlAPI");
         APIUrl = (String) urlAPI.get("API");
         Robot robot = new Robot();

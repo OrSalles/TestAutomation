@@ -3,23 +3,24 @@ package HalvaotProject;
 import HalvotPages.BasePage;
 import HalvotPages.PageLoader;
 import Utils.JsonUtils;
+import Utils.ReportUtils;
 import com.google.common.util.concurrent.Uninterruptibles;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.json.simple.JSONObject;
+import org.json.JSONObject;
 import org.openqa.selenium.Alert;
-import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
-import org.openqa.selenium.Dimension;
 
-public class BaseBPTest {
+public class BaseBPCompanyTest {
     protected WebDriver driver;
     protected PageLoader pageLoader;
     protected BasePage basePage;
@@ -30,7 +31,7 @@ public class BaseBPTest {
     String APIUrl = "";
 
     @BeforeClass
-    public void startSession() throws InterruptedException, AWTException {
+    public void startSession() throws InterruptedException, AWTException, IOException {
         JSONObject urlHalvaot = JsonUtils.returnJsonObject(urlData, "urlHalvaot");
         websiteUrl = (String) urlHalvaot.get("website");
         WebDriverManager.chromedriver().setup();
@@ -40,20 +41,15 @@ public class BaseBPTest {
         driver.manage().window().maximize();
         driver.get(websiteUrl);
         changeAPI();
-        driver.manage().timeouts().implicitlyWait(30000, TimeUnit.SECONDS);
-//        double zoomLevel = 0.8;
-//        ((JavascriptExecutor) driver).executeScript("document.body.style.zoom='" + zoomLevel + "'");
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         basePage = new BasePage(driver);
         pageLoader = new PageLoader(driver);
-//        basePage.wait.until(ExpectedConditions.jsReturnsValue("return document.readyState === 'complete'"));
-//        double zoomLevel = 0.8;
-//        ((JavascriptExecutor) driver).executeScript("document.body.style.zoom='" + zoomLevel + "'");
         pageLoader.BPTable.BPButton.click();
         pageLoader.BPTable.AddButton.click();
-        pageLoader.BPTable.PrivateBPButton.click();
+        pageLoader.BPTable.companyButton.click();
     }
 
-    private void changeAPI() throws AWTException, InterruptedException {
+    private void changeAPI() throws AWTException, InterruptedException, IOException {
         JSONObject urlAPI = JsonUtils.returnJsonObject(urlData, "urlAPI");
         APIUrl = (String) urlAPI.get("API");
         Robot robot = new Robot();
@@ -70,6 +66,10 @@ public class BaseBPTest {
         alert.sendKeys(APIUrl);
         driver.switchTo().alert().accept();
     }
+    @AfterMethod
+    public void saveScreenShot(){
+        ReportUtils.saveScreenShot(driver);
+    }
 
     @AfterClass
     public void closeSession() {
@@ -77,4 +77,3 @@ public class BaseBPTest {
         driver.quit();
     }
 }
-

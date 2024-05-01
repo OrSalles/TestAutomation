@@ -1,7 +1,6 @@
 package HalvotPages;
 
-import HalvotPages.BP.BPPrivateDetailsPage;
-import HalvotPages.BP.BPTablePage;
+import HalvotPages.BP.*;
 import HalvotPages.Deal.*;
 import HalvotPages.Frame.*;
 import HalvotPages.Loan.*;
@@ -41,6 +40,10 @@ public class PageLoader {
     public LoanOfferDataPage loanOfferData;
     public BPTablePage BPTable;
     public BPPrivateDetailsPage BPPrivateDetails;
+    public BPPrivateContactInformationPage BPPrivateContactInformation;
+    public BPCompanyDetailsPage BPCompanyDetails;
+    public BPCompanyContactInformationPage BPContactInfo;
+    public  BPCompanyContactsPage BPCompanyContacts;
 
 
     public PageLoader(WebDriver driver){
@@ -75,6 +78,11 @@ public class PageLoader {
         loanEvent = PageFactory.initElements(driver,LoanEventPage.class);
         loanOfferData = PageFactory.initElements(driver,LoanOfferDataPage.class);
         BPTable = PageFactory.initElements(driver,BPTablePage.class);
+        BPPrivateDetails = PageFactory.initElements(driver,BPPrivateDetailsPage.class);
+        BPPrivateContactInformation = PageFactory.initElements(driver, BPPrivateContactInformationPage.class);
+        BPCompanyDetails = PageFactory.initElements(driver, BPCompanyDetailsPage.class);
+        BPContactInfo = PageFactory.initElements(driver,BPCompanyContactInformationPage.class);
+        BPCompanyContacts = PageFactory.initElements(driver,BPCompanyContactsPage.class);
 
     }
 

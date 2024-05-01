@@ -4,6 +4,7 @@ import HalvotPages.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.python.bouncycastle.jcajce.provider.asymmetric.X509;
 
 public class BPTablePage extends BasePage {
     public BPTablePage(WebDriver driver){
@@ -15,5 +16,7 @@ public class BPTablePage extends BasePage {
     public WebElement AddButton;
     @FindBy(xpath = "//div[@class='dropdown-menu show']//a[@class='dropdown-item'][contains(text(),'פרטי')]")
     public WebElement PrivateBPButton;
+    @FindBy(xpath = "//a[contains(text(),'חברה')]")
+    public WebElement companyButton;
 
 }

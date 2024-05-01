@@ -171,7 +171,97 @@
   "LoanTest9": {
     "offerDataTab": "נתוני הצעה"
   },
-  "BPPrivateDetails": {
-    "PrivateBPTitle": "שותף עסקי - פרטי"
+  "BPPrivateDetails1": {
+    "firsName": "שם פרטי",
+    "secondName": "שם שני",
+    "lastName": "שם משפחה",
+    "nickName": "כינוי",
+    "fatherName": "שם האב"
+
+  },
+  "BPPrivateDetails2": {
+    "genderMale": "  זכר",
+    "ID": "  ת\"ז",
+    "stateOfIssue": "ישראל",
+    "countryOfBirth": "ישראל",
+    "generalComments": "בדיקה"
+  },
+  "BPPContactInfo": {
+    "district": "השרון",
+    "city": "נתניה",
+    "street": "הזית",
+    "houseNum": "4",
+    "entrance": "1",
+    "apartment": "1",
+    "registeredMailAddress": "456123",
+    "postalCode": "40599",
+    "addressDescription": "פרטי",
+    "phoneNum": "098911772",
+    "phoneDescription": "אישי",
+    "webAddress": "www.danel.com",
+    "webName": "Danel",
+    "email": "or@gmail.com",
+    "emailDescription": "אישי"
+  },
+  "BPPContactInfo1": {
+    "stateIsrael": "ישראל",
+    "geographicArea": "  ישראל",
+    "typePhone": "  סלולר"
+  },
+  "BPPContactInfo2": {
+    "district2": "השרון",
+    "city2": "נתניה",
+    "street2": "הזית",
+    "houseNum2": "4",
+    "entrance2": "1",
+    "apartment2": "1",
+    "registeredMailAddress2": "456123",
+    "postalCode2": "40599",
+    "addressDescription2": "פרטי"
+  },
+  "BPPContactInfo3": {
+    "stateIsrael2": "ישראל",
+    "geographicArea2": "  ישראל"
+  },
+  "BPCompanyInfo": {
+    "companyName": "Danel",
+    "formOfIncorporation": "  חברה",
+    "texCorporationNum": "100",
+    "countryToTaxField": "ישראל",
+    "BnNumber":   "  ח\"פ",
+    "stateOfIssueField": "ישראל",
+    "dateOfIssue": "01/01/1990",
+    "generalComments": "בדיקה"
+  },
+  "BPCompanyContactInformation": {
+    "stateIsrael": "ישראל",
+    "geographicArea": "  ישראל",
+    "district": "השרון",
+    "city": "נתניה",
+    "street": "הזית",
+    "houseNum": "4",
+    "entrance": "1",
+    "apartment": "1",
+    "registeredMailAddress": "456123",
+    "postalCode": "40599",
+    "addressDescription": "פרטי",
+    "phoneType": "  סלולר",
+    "phoneNum": "0508903336",
+    "phoneDescription": "פרטי",
+    "website": "www.danel.con",
+    "websiteName": "Danel",
+    "email": "danel@gmail.com",
+    "emailDescription": "עסקי"
+  },
+  "BPCompanyContacts": {
+    "serialNumber": "4",
+    "contactName": "ניקולה יוקיץ",
+    "ID": "רישיון נהיגה 1234567 - ישראל",
+    "phoneNumber": "fff - 05222222 (סלולר)",
+    "email": "fff@gmail.com",
+    "role": "  מנהל כספים"
   }
+
+
+
 }
